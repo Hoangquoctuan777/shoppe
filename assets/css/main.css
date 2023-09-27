@@ -722,7 +722,8 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
-    
+    height: 50vh;
+    overflow-y: auto;
 }
 
 .header__cart-item {
@@ -755,13 +756,19 @@
 .header__cart-item-name {
     font-size: 1.4rem;
     font-weight: 500;
+    line-height: 2rem;
+    max-height: 4rem;
     color: var(--text-color);
     margin: 0;
-    max-width: 150px;
+    text-align: left;
+    flex: 1;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    line-height: 1.8;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-right: 16px;
+ 
+
 }
 
 .header__cart-item-price {
@@ -1065,7 +1072,6 @@ i.home-product-item__liked-icon {
     background-color: currentColor;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-
 }
 
 .home-product-item__favourite::before {
@@ -1094,7 +1100,6 @@ i.home-product-item__liked-icon {
     height: 36px;
     text-align: center;
     background-color: rgba(255, 216, 64, 0.94); 
-    
 }
 
 .home-product-item__sale-off::before {
@@ -1120,4 +1125,165 @@ i.home-product-item__liked-icon {
     color: var(--white-color);
     font-size: 1.2rem;
     line-height: 1.2rem;
+}
+/* pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+.pagination-item---active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    
+}
+.pagination-item---active .pagination-item__link:hover {
+    opacity: 0.9;
+}
+.pagination-item__link {
+    --height: 30px;
+    color: #939393;
+    width: 40px;
+    height: var(--height);
+    display: block;
+    line-height:var(--height);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+/* footer */
+.footer {
+    border-top: 4px solid var(--primary-color);
+    padding-top: 16px;
+}
+.footer__heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.footer__list {
+    padding-left: 0;
+}
+
+.footer__list-item {
+    list-style: none; 
+}
+
+.footer__list-item-link {
+    text-decoration: none;
+    color: #737373;
+    font-size: 1.3rem;
+    padding: 4px 0;
+    display: block;
+}
+
+.footer__list-item-link:hover {
+    color: var(--primary-color);
+}
+
+.footer__download {
+    display: flex;
+    align-items: center;
+}
+
+.footer__download-qr {
+    width: 80px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+}
+.footer__download-app-img-link {
+    text-decoration: none;
+    color: transparents;
+}
+.footer__download-apps {
+    flex: 1;
+}
+
+.footer__download-app-img {
+    height: 16px;
+    display: block;
+    margin: 8px;
+}
+
+.footer__list-item-icon {
+    margin-right: 4px;
+    font-size: 1.6rem;
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--border-color);
+    margin-top: 20px;
+}
+.footer__bottom-info {
+    font-size: 1.6rem;
+    color: #737373;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__bottom-info {
+    padding: 40px 0;
+}
+
+.footer__nation-text-name {
+    text-decoration: none;
+    color: #737373;
+    border-right: 1px solid var(--border-color);
+    padding: 0 5px;
+}
+.footer__nation-text-name:last-child {
+    border-right: none;
+}
+
+.footer_bottom__end {
+    background-color: #fbfbfb;
+    padding: 30px 0;
+}
+
+.footer__end-logo-img {
+    height: 60px;
+}
+
+.footer__end-header {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer__end-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #737373;
+    border-right: 1px solid var(--border-color);
+    padding: 0 40px;
+}
+.footer__end-link:last-child {
+    border-right: none;
+}
+
+.footer__end-logo {
+    text-align: center;
+    padding: 30px 0;
+}
+.coppy-right {
+    font-size: 1.4rem;
+    color: #737373;
+    text-align: center;
+}
+.coppy-right p {
+    margin: 0;
+    display: block;
+}
+
+.coppy-right-link:hover {
+    color: var(--primary-color);
 }
