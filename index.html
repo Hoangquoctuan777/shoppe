@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/grid.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400, 500, 700display=swapsubset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css">
 
@@ -13,10 +15,12 @@
 </head>
 <body>
     <!-- Block Element Modifier -->
+    
     <div class="app">
+        
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng Shoppe
@@ -142,7 +146,46 @@
                     </ul>
                 </nav>
                 <!-- header-with-search -->
+               
                 <div class="header-with-search">
+                    <div class="header__menu-mobile">
+                            <label for="nav-mobile-input" class="nav__bars-btn">
+                                <i class="fa-solid fa-bars"></i> 
+                        </label>
+                        
+        
+                        <input type="checkbox" hidden class="nav__input" name="" id="nav-mobile-input">
+                    
+                        <label for="nav-mobile-input" class="nav__overlay"></label>
+        
+                        <nav class="nav__mobile">
+                            <label for="nav-mobile-input" class="nav__mobile-close">   
+                                <i class="fa-solid fa-xmark"></i>
+                            </label>
+                            <ul class="nav__mobile-list">
+                                <li>
+                                    <a href="" class="nav__mobile-link">Trang chủ</a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav__mobile-link">Giỏ hàng</a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav__mobile-link">Trợ giúp</a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav__mobile-link">Cài đặt</a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav__mobile-link">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </nav>
+                       
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
+                   
                     <div class="header__logo">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
@@ -155,7 +198,8 @@
                         </a>
                     </div>
                     <!-- header__search -->
-                    <div class="header__search">
+                    <input type="checkbox" hidden class="header__mobile-checkbox" id="mobile-search-checkbox">
+                    <div class="header__search ">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Shoppe bao ship 0Đ - Đăng ký ngay!">
                             <div class="header__search-history">
@@ -262,106 +306,6 @@
                                             </div>
                                         </div>
                                     </li>
-
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/sale-9.9-03-THUMB-10-scaled.webp" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Kem phục hồi giảm thâm mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">4.000.000</span>
-                                                    <span class="header__cart-multiply">x</span>
-                                                    <span class="header__cart-item-quantity">6</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-desc">
-                                                    Phân loại: Tuýp
-                                                </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/sale-9.9-03-THUMB-10-scaled.webp" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Kem phục hồi giảm thâm mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">4.000.000</span>
-                                                    <span class="header__cart-multiply">x</span>
-                                                    <span class="header__cart-item-quantity">6</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-desc">
-                                                    Phân loại: Tuýp
-                                                </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/sale-9.9-03-THUMB-10-scaled.webp" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Kem phục hồi giảm thâm mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">4.000.000</span>
-                                                    <span class="header__cart-multiply">x</span>
-                                                    <span class="header__cart-item-quantity">6</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-desc">
-                                                    Phân loại: Tuýp
-                                                </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/sale-9.9-03-THUMB-10-scaled.webp" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Kem phục hồi giảm thâm mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">4.000.000</span>
-                                                    <span class="header__cart-multiply">x</span>
-                                                    <span class="header__cart-item-quantity">6</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-desc">
-                                                    Phân loại: Tuýp
-                                                </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/sale-9.9-03-THUMB-10-scaled.webp" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Kem phục hồi giảm thâm mắt</h5>
-                                                <div class="header__cart-item-price-wrap">
-                                                    <span class="header__cart-item-price">4.000.000</span>
-                                                    <span class="header__cart-multiply">x</span>
-                                                    <span class="header__cart-item-quantity">6</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-desc">
-                                                    Phân loại: Tuýp
-                                                </span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
                                 </ul>
                                 <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
                             </div>
@@ -369,12 +313,26 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item-active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
         <div class="app__container">
-           <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+           <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 c-0 m-0">
                         <nav class="category">
                             <h3 class="category__heading">
                                 <i class="category__heading-icon fa-solid fa-list"></i>
@@ -412,8 +370,8 @@
                         </nav>
                     </div>
 
-                    <div class="grid__column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -451,8 +409,8 @@
 
                         <div class="home-product">
                             <!-- grid -> row -> column -->
-                            <div class="grid__row">
-                                <div class="grid__column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -494,7 +452,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -536,7 +494,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -578,7 +536,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -620,7 +578,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -662,7 +620,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -704,7 +662,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -746,7 +704,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -788,7 +746,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -830,7 +788,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -872,7 +830,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -914,7 +872,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -956,7 +914,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -998,7 +956,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -1040,7 +998,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -1082,7 +1040,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -1124,7 +1082,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -1166,7 +1124,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -1208,7 +1166,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -1250,7 +1208,7 @@
                                     </a>
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134211-7qukw-lhb935apaz1v52);"></div>
                                         <h4 class="home-product-item__name">Dép Kiểu Nữ Quai Chéo Kẻ Dạ Cao cấp Sản Phẩm Mới 2023 - VeoStore</h4>
@@ -1335,9 +1293,9 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
-                <div class="footer__header grid__row">
-                    <div class="grid__column-2-4">
+            <div class="grid wide">
+                <div class="footer__header row">
+                    <div class="col l-2-4 m-3 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer__list">
                             <li class="footer__list-item">
@@ -1352,7 +1310,7 @@
                             
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-3 c-6">
                         <h3 class="footer__heading">Về shoppe</h3>
                         <ul class="footer__list">
                             <li class="footer__list-item">
@@ -1366,7 +1324,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-3 c-6">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer__list">
                             <li class="footer__list-item">
@@ -1380,7 +1338,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-3 c-6">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer__list">
                             <li class="footer__list-item">
@@ -1403,7 +1361,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-3 c-6">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__download">
                             <img src="/assets/img/qr-codebanking.jpg" alt="QR" class="footer__download-qr">
@@ -1422,8 +1380,8 @@
                     </div>
                 </div>
                 <div class="footer__bottom">
-                    <div class="grid">
-                        <div class="grid__row footer__bottom-info">
+                    <div class="grid wide">
+                        <div class="row footer__bottom-info">
                             <div class="footer__text">
                                 <p>© 2023 Shopee. Tất cả các quyền được bảo lưu.</p>
                             </div>
@@ -1448,7 +1406,7 @@
                 </div>
             </div>
             <div class="footer_bottom__end">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="footer__end">
                         <div class="footer__end-header">
                             <a href="" class="footer__end-link">Chính sách bảo mật</a>
