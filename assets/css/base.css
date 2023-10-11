@@ -12,6 +12,7 @@
 }
 * {
     box-sizing: inherit;
+    padding: 0;
 }
 
 html {
